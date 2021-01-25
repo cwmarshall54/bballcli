@@ -13,7 +13,7 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        nbacli=command:cli
+        nba=command:cli
     '''
     ,
 )

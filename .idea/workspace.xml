@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="719729b7-2588-4c49-a04f-7077694998ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/week_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/week_5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankPandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankPandas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="630">
-                <caret line="50" column="3" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+              <first_editor relative-caret-position="615">
+                <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -95,6 +93,7 @@
       <find>my</find>
       <find>'Games&quot;</find>
       <find>Games:</find>
+      <find>nbacli</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/FbRankController" />
         <option value="$PROJECT_DIR$/src/FbRankPandas.py" />
         <option value="$PROJECT_DIR$/src/FbRankController.py" />
-        <option value="$PROJECT_DIR$/src/setup.py" />
         <option value="$PROJECT_DIR$/src/TradeMachineController.py" />
         <option value="$PROJECT_DIR$/src/FbTeamsController.py" />
         <option value="$PROJECT_DIR$/src/bball_api.py" />
@@ -124,6 +122,8 @@
         <option value="$PROJECT_DIR$/src/formatter.py" />
         <option value="$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankPandas.py" />
         <option value="$PROJECT_DIR$/src/Commands/FbTeamRank/FbTeamRankController.py" />
+        <option value="$PROJECT_DIR$/src/setup.py" />
+        <option value="$PROJECT_DIR$/src/fantasybball.egg-info/entry_points.txt" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -341,16 +341,6 @@
     <entry file="file://$PROJECT_DIR$/src/analytics.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/command.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="e#19#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bball_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -419,11 +409,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="e#19#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="630">
-            <caret line="50" column="3" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+          <first_editor relative-caret-position="615">
+            <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>

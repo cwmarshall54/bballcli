@@ -6,13 +6,12 @@ README
 
 ```pip install --editable .```
 
-
-```player_averages```
+```nba```
 
 
 ```
-(venv) Chases-MacBook-Pro:src chasemarshall1$ nbacli
-Usage: nbacli [OPTIONS] COMMAND [ARGS]...
+(venv) Chases-MacBook-Pro:src chasemarshall1$ nba
+Usage: nba [OPTIONS] COMMAND [ARGS]...
 
   A command line application
 
@@ -25,7 +24,7 @@ Commands:
   fbteams
 ```
 
-##fbplayers Output Example
+## fbplayers Output Example
 ```
 Players: 478
                           Name         Roster status   IS  GP    pts  fg3m    reb   ast   stl   blk    fga    fgm   ftm    fta    min    TO  ft_per  fg_per  Total_zscore
@@ -47,7 +46,7 @@ Total Rank
 15                 Rudy Gobert    Like and Subscribe       16  12.12  0.00  13.62  1.44  0.44  2.69   8.00   4.88  2.38   4.94  29.92  1.56   0.482   0.610         8.951
 ```
 
-##fbteams Output Example
+## fbteams Output Example
 ```
                           FGM/A    FG%    FTM/A    FT%  3PM   PTS   REB  AST  STL  BLK   TO  FG% Rank  FT% Rank  3PM Rank  PTS Rank  REB Rank  AST Rank  STL Rank  BLK Rank  TO Rank  Top 6 Rank  Total Rank
 name                                                                                                                                                                                                        
