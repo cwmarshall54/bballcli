@@ -55,7 +55,7 @@ class FbRankPandas:
 			 "ft_weighted",
 			 "fg_weighted", "pts_zscore", "ft_weighted_zscore", "fg_weighted_zscore", "Eligible positions"], axis=1)
 		
-		print(df.sort_values(by="Total Rank", ascending=True).head(count))
+		print(df.sort_values(by="Total Rank", ascending=True).head(count).round(3))
 	
 		# df = df[['name', 'ast_zscore', 'blk_zscore', 'fg3m_zscore', 'pts_zscore', 'reb_zscore', 'stl_zscore',
 		# 'ft_weighted_zscore', 'fg_weighted_zscore', 'turnover_zscore', 'Total_zscore']]

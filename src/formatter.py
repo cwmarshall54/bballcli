@@ -35,10 +35,8 @@ class Formatter:
 
 			averages.append(new_player)
 
-
-
 		print("Finished data formatting")
-		print("Games: " + str(len(averages)))
+		print("Players: " + str(len(averages)))
 		return averages
 
 	def remove_some_positions(self, position_list):
