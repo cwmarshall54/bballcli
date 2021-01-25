@@ -1,5 +1,4 @@
 import requests
-import json
 
 from utils import Utils
 from bball_parser import BBallParser

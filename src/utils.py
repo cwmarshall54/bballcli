@@ -2,12 +2,12 @@ import pprint
 import json
 import pandas as pd
 from datetime import date
-import math
 
 pd.options.mode.chained_assignment = None
 file_path = "/Users/chasemarshall1/Desktop/fantasybball/"
 
-curr_week = 4
+curr_week = 5
+
 
 class Utils:
 	def __init__(self):
@@ -145,7 +145,7 @@ class Utils:
 	def stat_tuple(self, stat1, stat2):
 		stat1 = stat1.split('/')
 		stat2 = stat2.split('/')
-		return (int(stat1[0]) + int(stat2[0]), int(stat1[1]) + int(stat2[1]))
+		return int(stat1[0]) + int(stat2[0]), int(stat1[1]) + int(stat2[1])
 
 	def combine_cat_stat(self, df1, df2, cat):
 		return df1[cat].combine(df2[cat], self.combine_stat)

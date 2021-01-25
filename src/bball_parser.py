@@ -1,7 +1,5 @@
-import os
-import sys
-
 from utils import Utils
+
 
 class BBallParser:
 	def __init__(self):
@@ -11,7 +9,7 @@ class BBallParser:
 		keys = list(all_player_stats_index.keys())
 		replace_count = 0
 		new_count = 0
-		older_count = 0
+		older_count: int = 0
 
 		for player in new_player_stats_index.values():
 			bball_id = str(player['bball_id'])
@@ -32,7 +30,8 @@ class BBallParser:
 
 		return all_player_stats_index
 
-	def merge_game_list(self, old_games_list, new_game_list):
+	@staticmethod
+	def merge_game_list(old_games_list, new_game_list):
 		changed_games_ids_list = []
 		changed_games = []
 		for old_game in old_games_list:
@@ -50,7 +49,6 @@ class BBallParser:
 
 		return refreshed_list + changed_games
 
-
 	def clean_and_index_player_stats(self, player_info_list, player_stats):
 		index_list = {}
 		for info in player_info_list:
@@ -58,6 +56,7 @@ class BBallParser:
 				index_list[str(info['bball_id'])] = info
 		return self.add_to_index_list(index_list, player_stats)
 
+	@staticmethod
 	def add_to_index_list(self, index_list, player_stats):
 		keys = index_list.keys()
 		for game in player_stats:

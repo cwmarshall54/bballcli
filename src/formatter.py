@@ -1,8 +1,5 @@
-import os
-import sys
-
 from utils import Utils
-from datetime import date
+
 
 class Formatter:
 	def __init__(self):
@@ -104,9 +101,7 @@ class Formatter:
 			else:
 				entry[key] = round(entry[key]/len(games), 2)
 
-
 		return entry
-
 
 	def get_sec(self, time_str):
 		if str(time_str) == "0":

@@ -13,7 +13,7 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        player_averages=player_averages:cli
+        nbacli=command:cli
     '''
     ,
 )
