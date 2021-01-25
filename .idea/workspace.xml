@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719729b7-2588-4c49-a04f-7077694998ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankPandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankPandas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FbTeamRank/FbTeamRankController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/FbTeamRank/FbTeamRankController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/TradeMachine/TradeMachineController.py" beforeDir="false" afterPath="$PROJECT_DIR$/Commands/TradeMachine/TradeMachineController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bball_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/bball_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bball_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/bball_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command.py" beforeDir="false" afterPath="$PROJECT_DIR$/command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/support.py" beforeDir="false" afterPath="$PROJECT_DIR$/support.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yahoo_get.py" beforeDir="false" afterPath="$PROJECT_DIR$/yahoo_get.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,19 +27,34 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/command.py">
+        <entry file="file://$PROJECT_DIR$/command.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-              <folding>
-                <element signature="e#19#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils.py">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2053">
               <caret line="169" column="29" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="29" />
@@ -37,7 +66,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankController.py">
+        <entry file="file://$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankController.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
               <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
@@ -48,12 +77,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="840">
-                <caret line="66" column="7" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="7" />
+              <first_editor relative-caret-position="847">
+                <caret line="71" column="158" selection-start-line="71" selection-start-column="158" selection-end-line="71" selection-end-column="158" />
               </first_editor>
               <second_editor />
             </state>
@@ -61,7 +90,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Commands/FbTeamRank/FbTeamRankController.py">
+        <entry file="file://$PROJECT_DIR$/Commands/FbTeamRank/FbTeamRankController.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
               <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
@@ -73,7 +102,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankPandas.py">
+        <entry file="file://$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankPandas.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
               <caret line="57" column="81" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="81" />
@@ -103,7 +132,6 @@
       <list>
         <option value="$PROJECT_DIR$/out/last_update.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/src/player_averages.py" />
         <option value="$PROJECT_DIR$/src/bball_parser.py" />
         <option value="$PROJECT_DIR$/src/fbrankPandas.py" />
@@ -113,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/TradeMachineController.py" />
         <option value="$PROJECT_DIR$/src/FbTeamsController.py" />
         <option value="$PROJECT_DIR$/src/bball_api.py" />
-        <option value="$PROJECT_DIR$/src/command.py" />
         <option value="$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankController.py" />
         <option value="$PROJECT_DIR$/src/get.py" />
         <option value="$PROJECT_DIR$/src/support.py" />
@@ -124,6 +151,9 @@
         <option value="$PROJECT_DIR$/src/setup.py" />
         <option value="$PROJECT_DIR$/src/fantasybball.egg-info/entry_points.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
+        <option value="$PROJECT_DIR$/src/command.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -161,26 +191,6 @@
               <item name="fantasybball" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="fantasybball" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fantasybball" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fantasybball" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fantasybball" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-              <item name="FbPlayerRank" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fantasybball" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fantasybball" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-              <item name="FbTeamRank" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -194,6 +204,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Commands/TradeMachine" />
       <recent name="$PROJECT_DIR$/src/Commands/FbTeamRank" />
       <recent name="$PROJECT_DIR$/src/Commands/FbPlayerRank" />
@@ -293,14 +304,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankController.py">
+    <entry file="file://$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankController.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/refresh_team_stats.py">
@@ -320,7 +324,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/TradeMachine/TradeMachineController.py">
+    <entry file="file://$PROJECT_DIR$/Commands/TradeMachine/TradeMachineController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
@@ -330,45 +334,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/analytics.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bball_api.py">
+    <entry file="file://$PROJECT_DIR$/bball_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bball_parser.py">
+    <entry file="file://$PROJECT_DIR$/bball_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/formatter.py">
+    <entry file="file://$PROJECT_DIR$/formatter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/support.py">
+    <entry file="file://$PROJECT_DIR$/support.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2053">
           <caret line="169" column="29" selection-start-line="169" selection-start-column="29" selection-end-line="169" selection-end-column="29" />
@@ -378,17 +375,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/FbPlayerRank/FbPlayerRankPandas.py">
+    <entry file="file://$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankPandas.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
           <caret line="57" column="81" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="81" />
@@ -398,7 +385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/FbTeamRank/FbTeamRankController.py">
+    <entry file="file://$PROJECT_DIR$/Commands/FbTeamRank/FbTeamRankController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
@@ -408,23 +395,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/command.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="847">
+            <caret line="71" column="158" selection-start-line="71" selection-start-column="158" selection-end-line="71" selection-end-column="158" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/FbPlayerRank/FbPlayerRankController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="435">
+          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding>
-            <element signature="e#19#31#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="840">
-            <caret line="66" column="7" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
