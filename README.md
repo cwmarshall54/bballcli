@@ -61,3 +61,12 @@ Yao Ming              1064/2165  0.491  466/585  0.797  298  2892   976  629  16
 ja dunno big up urrr   903/1847  0.489  404/498  0.811  181  2391   860  631  122   95  313      9.66      8.98      1.00      1.00      1.19      4.79      1.00      2.53     9.69       36.84       39.84
 Dame Time              936/2136  0.438  462/560  0.825  279  2613   847  472  140  104  315      1.00     10.00      5.72      2.73      1.00      1.00      2.26      3.29     9.57       33.57       36.57
 ```
+
+# Documentation
+
+- [Click startup guide](https://readthedocs.org/projects/pocoo-click/downloads/pdf/latest/)
+- [More Click docs](https://click.palletsprojects.com/en/7.x/)
+- Ball dont lie Api Example: `https://www.balldontlie.io/api/v1/stats?seasons[]=2020&player_ids[]=115`
+- [Ball dont lie homepage](https://www.balldontlie.io/#stats)
+- [Yahoo API docs](https://yahoo-fantasy-api.readthedocs.io/en/latest/yahoo_fantasy_api.html#the-game-class)
+- [Fantasy Basketball Rankings](https://hashtagbasketball.com/fantasy-basketball-rankings?fbclid=IwAR1rv-ahMnvfuuQb7Y366svoOu3Cco4kB-VJCd8fMTma6-Mey9CgrPtJfX8)
