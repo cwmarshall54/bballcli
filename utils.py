@@ -47,16 +47,14 @@ class Utils:
 		return list(self.stat_ids.values())[:4]
 
 	def write_file(self, file_name, data):
-		print("Started writing: " + file_name)
 		with open(self.get_out_file_path() + file_name, 'w') as outfile:
 			json.dump(data,  outfile)
 			print("Finished writing: " + file_name)
 
 	def read_file(self, file_name):
-		print("Started reading: " + file_name)
+		print("Reading: " + file_name)
 		with open(self.get_out_file_path() + file_name) as json_file:
 			file = json.load(json_file)
-			print("Finished reading: " + file_name)
 			return file
 
 	def print(self, data):
@@ -72,16 +70,15 @@ class Utils:
 
 			roll_lst.append(i+1) # index1 + 1
 
-			if (item != item2):
+			if item != item2:
 				new_lst = new_lst + self.combine(roll_lst)
 				roll_lst = []
 
-
-			if (i+2 == len(lst)): # end of lst
-				if (item == item2):
+			if i+2 == len(lst): # end of lst
+				if item == item2:
 					roll_lst.append(i+2) # last index
 					new_lst = new_lst + self.combine(roll_lst)
-				elif(len(roll_lst) == 0):
+				elif len(roll_lst) == 0:
 					new_lst.append(i+2)
 				else:
 					new_lst.append(self.combine(roll_lst))

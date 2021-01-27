@@ -3,9 +3,9 @@
 import unidecode
 
 from utils import Utils
-from yahoo_get import YahooAPI
-from bball_api import BBallAPI
-from formatter import Formatter
+from APIs.yahoo_get import YahooAPI
+from APIs.bball_api import BBallAPI
+from APIs.formatter import Formatter
 
 utils = Utils()
 yahoo_API = YahooAPI()

@@ -9,7 +9,8 @@ setup(
     	'unidecode',
     	'yahoo_fantasy_api',
     	'yahoo_oauth',
-    	'pandas'
+    	'pandas',
+	    'requests'
     ],
     entry_points='''
         [console_scripts]

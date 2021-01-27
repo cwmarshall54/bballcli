@@ -10,7 +10,7 @@ README
 
 
 ```
-(venv) Chases-MacBook-Pro:src chasemarshall1$ nba
+(venv) Chases-MacBook-Pro chasemarshall1$ nba
 Usage: nba [OPTIONS] COMMAND [ARGS]...
 
   A command line application
@@ -62,7 +62,48 @@ ja dunno big up urrr   903/1847  0.489  404/498  0.811  181  2391   860  631  12
 Dame Time              936/2136  0.438  462/560  0.825  279  2613   847  472  140  104  315      1.00     10.00      5.72      2.73      1.00      1.00      2.26      3.29     9.57       33.57       36.57
 ```
 
-# Documentation
+## playerindex Output Example
+```
+(venv) Chases-MacBook-Pro:fantasybball chasemarshall1$ nba playerindex
+Use -n to specify a partial first name
+Eg: '-n Le' would return 'Lebron James'
+(venv) Chases-MacBook-Pro:fantasybball chasemarshall1$ nba playerindex -n Le
+Reading: player_stats_index.json
+Reading: owner_index.json
+Players: 479
+           Name    Roster status   IS Eligible positions  GP    pts  fg3m   reb   ast   stl   blk    fga   fgm  ftm   fta    min    TO
+0  LeBron James  Load Management  GTD       [PG, SG, SF]  18  25.17  2.72  7.89  7.39  0.94  0.44  18.56  9.22  4.0  5.61  32.67  3.67
+```
+
+## games Output Example
+```
+(venv) Chases-MacBook-Pro:fantasybball chasemarshall1$ nba games
+Use -n to specify a partial first name
+Eg: '-n Le' would return 'Lebron James'
+(venv) Chases-MacBook-Pro:fantasybball chasemarshall1$ nba games -n Lillard
+Reading: player_stats_index.json
+Reading: owner_index.json
+                      name  fg_pct  ft_pct  fg3m  pts  reb  ast  stl  blk  to
+date                                                                         
+2021-01-25  Damian Lillard    36.4    87.5     3   26    6   10    0    0   3
+2021-01-24  Damian Lillard    64.7   100.0     6   39    5    8    1    0   3
+2021-01-18  Damian Lillard    43.5   100.0     3   35    3    6    1    1   5
+2021-01-16  Damian Lillard    43.5   100.0     4   36    7    7    1    0   3
+2021-01-14  Damian Lillard    43.8   100.0     2   22    6    4    1    0   5
+2021-01-13  Damian Lillard    47.8   100.0     6   40    1   13    3    0   0
+2021-01-11  Damian Lillard    50.0   100.0     3   23    7    5    0    1   8
+2021-01-09  Damian Lillard    31.2   100.0     1   17    4    6    1    0   0
+2021-01-07  Damian Lillard    61.9    85.7     7   39    7    7    3    0   1
+2021-01-05  Damian Lillard    35.3    81.8     3   24    5    9    0    0   0
+2021-01-03  Damian Lillard    41.7    85.7     6   32    4    4    0    0   5
+2021-01-01  Damian Lillard    52.4   100.0     6   34    4    8    1    0   1
+2020-12-30  Damian Lillard    21.4    93.3     0   20    5    4    1    0   4
+2020-12-28  Damian Lillard    62.5   100.0     5   31    4    5    0    1   5
+2020-12-26  Damian Lillard    39.3   100.0     5   32    5    9    1    0   5
+2020-12-23  Damian Lillard    33.3     0.0     1    9    4    7    1    1   1
+```
+
+# Some useful docs
 
 - [Click startup guide](https://readthedocs.org/projects/pocoo-click/downloads/pdf/latest/)
 - [More Click docs](https://click.palletsprojects.com/en/7.x/)

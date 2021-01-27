@@ -1,7 +1,9 @@
 import pandas as pd
 
 from utils import Utils
-from formatter import Formatter
+from APIs.formatter import Formatter
+from APIs.bball_api import BBallAPI
+from APIs.yahoo_get import YahooAPI
 
 pd.set_option("display.max_rows", None)
 
@@ -10,15 +12,30 @@ class FbRankPandas:
 	def __init__(self):
 		self.utils = Utils()
 		self.formatter = Formatter()
+		self.basketball_API = BBallAPI()
+		self.yahoo_API = YahooAPI()
+	
+	def refresh_player_stats(self):
+		players_with_stats = self.basketball_API.refresh_2021_season_player_stats()
+		self.utils.write_file("player_stats_index.json", players_with_stats)
+		return players_with_stats
+	
+	def get_ownership_of_taken_players(self):
+		owner_list = self.yahoo_API.ownership_of_taken_players()
+		self.utils.write_file("owner_index.json", owner_list)
+		return owner_list
 		
-	def yahoo_rank(self, player_stats, owner_list, count):
-		raw_stats = self.combine_stats_with_owner(player_stats, owner_list)
+	def yahoo_rank(self, should_refresh, count, show_z):
+		if should_refresh:
+			player_stats = self.refresh_player_stats()
+			owner_list = self.get_ownership_of_taken_players()
+		else:
+			player_stats = self.utils.read_file("player_stats_index.json")
+			owner_list = self.utils.read_file("owner_index.json")
+			
+		df = self.formatter.pandas_player_averages(player_stats, owner_list)
 		
-		combined = self.formatter.combine_player_stats_dic(raw_stats)
-		
-		df = pd.DataFrame(combined)
-		
-		df = df[df['min'] > 5]
+		df = df.head(200)
 		
 		df['ft_per'] = df['ftm'] / df['fta']
 		df['ft_weighted'] = (df['ft_per'] - df['ft_per'].mean()) * df['ftm']
@@ -33,55 +50,40 @@ class FbRankPandas:
 			cols.remove(col)
 		
 		for col in cols:
-			col_zscore = col + '_zscore'
+			col_z = col + '_z'
 			top = df.sort_values(by=col, ascending=False).head(350)
 			drop_na_col = top[col]
 			if col == "TO":
-				df[col_zscore] = (drop_na_col - drop_na_col.mean()) / drop_na_col.std(ddof=1) * -1
+				df[col_z] = (drop_na_col - drop_na_col.mean()) / drop_na_col.std(ddof=1) * -1
 			else:
-				df[col_zscore] = (drop_na_col - drop_na_col.mean()) / drop_na_col.std(ddof=1)
+				df[col_z] = (drop_na_col - drop_na_col.mean()) / drop_na_col.std(ddof=1)
 		
 		df = df.fillna(0)
 		
-		df["Total_zscore"] = df["ast_zscore"] + df["fg3m_zscore"] + df["pts_zscore"] + df["reb_zscore"] + df[
-			"stl_zscore"] + \
-		                     df["blk_zscore"] + df['TO_zscore'] + df['ft_weighted_zscore'] + df['fg_weighted_zscore']
-		df['Total Rank'] = df['Total_zscore'].rank(ascending=False).astype(int)
+		df["Total_z"] = df["ast_z"] + df["fg3m_z"] + df["pts_z"] + df["reb_z"] + df["stl_z"] \
+		                + df["blk_z"] + df['ft_weighted_z'] + df['fg_weighted_z']  # + df['TO_z']
+		df['Total Rank'] = df['Total_z'].rank(ascending=False).astype(int)
 		
 		df = df.set_index('Total Rank')
 		
-		df = df.drop(
-			['GP_zscore', 'blk_zscore', 'fg3m_zscore', 'ast_zscore', 'reb_zscore', 'stl_zscore', "TO_zscore",
-			 "ft_weighted",
-			 "fg_weighted", "pts_zscore", "ft_weighted_zscore", "fg_weighted_zscore", "Eligible positions"], axis=1)
-		
+		if show_z:
+			df = df.drop(
+				['GP_z', 'blk', 'fg3m', 'ast', 'reb', 'stl', "TO",
+				 "ft_weighted", "fga", "fgm", "ftm", "fta", "ft_per", "fg_per",
+				 "fg_weighted", "pts", "Eligible positions"], axis=1)
+		else:
+			df = df.drop(
+				['GP_z', 'blk_z', 'fg3m_z', 'ast_z', 'reb_z', 'stl_z', "TO_z",
+				 "ft_weighted",
+				 "fg_weighted", "pts_z", "ft_weighted_z", "fg_weighted_z", "Eligible positions"], axis=1)
+					
 		print(df.sort_values(by="Total Rank", ascending=True).head(count).round(3))
 	
-		# df = df[['name', 'ast_zscore', 'blk_zscore', 'fg3m_zscore', 'pts_zscore', 'reb_zscore', 'stl_zscore',
-		# 'ft_weighted_zscore', 'fg_weighted_zscore', 'turnover_zscore', 'Total_zscore']]
+		# df = df[['name', 'ast_z', 'blk_z', 'fg3m_z', 'pts_z', 'reb_z', 'stl_z',
+		# 'ft_weighted_z', 'fg_weighted_z', 'turnover_z', 'Total_z']]
 		
 		# df1 = df[df["Roster status"]].isin(["Chuck it for buckets", "Dame Time"])
 		
 		# print(df1.sort_values(by="My Rank", ascending=True))
 		
 		# #df = df[df["Roster status"] != "FA"]
-	
-	@staticmethod
-	def combine_stats_with_owner(player_stats, owner_list):
-		owned_yahoo_keys = owner_list.keys()
-		keys = player_stats.keys()
-		
-		new_dic = {}
-		
-		for key in keys:
-			player = player_stats[key]
-			yahoo_id = str(player['yahoo_id'])
-			if yahoo_id in owned_yahoo_keys:
-				player_ownership_info = owner_list[yahoo_id]
-				if "owner_team_name" in player_ownership_info:
-					owner_team_name = player_ownership_info['owner_team_name']
-					player['owner_team_name'] = owner_team_name
-			
-			new_dic[key] = player
-		
-		return new_dic

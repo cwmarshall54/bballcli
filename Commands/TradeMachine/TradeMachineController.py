@@ -1,9 +1,9 @@
 import pandas as pd
 
 from utils import Utils
-from formatter import Formatter
-from bball_api import BBallAPI
-from yahoo_get import YahooAPI
+from APIs.formatter import Formatter
+from APIs.bball_api import BBallAPI
+from APIs.yahoo_get import YahooAPI
 from Commands.FbPlayerRank.FbPlayerRankPandas import FbRankPandas
 
 pd.set_option("display.max_rows", None)
