@@ -5,6 +5,7 @@ from Commands.FbPlayerRank.FbPlayerRankController import FbPlayerRankController
 from Commands.FbTeamRank.FbTeamRankController import FbTeamRankController
 from Commands.PlayerIndex.PlayerIndexController import PlayerIndexController
 from Commands.Games.GamesController import GamesController
+from Commands.TradeMachine.TradeMachineController import TradeMachineController
 from APIs.odds_api import OddsAPI
 
 
@@ -19,8 +20,9 @@ def cli():
 @click.option('--refresh', '-r', help='Should refresh player stats', is_flag=True)
 @click.option('--count', '-c', default=15, help='Number of players', type=int)
 @click.option('--show_zscore', '-z', help='Show zscore', is_flag=True)
-def fbplayers(refresh, count, show_zscore):
-	FbPlayerRankController().print_fb_rank(refresh, count, show_zscore)
+@click.option('--sort_by', '-s', help='Sort by', type=str)
+def fbplayers(refresh, count, show_zscore, sort_by):
+	FbPlayerRankController().print_fb_rank(refresh, count, show_zscore, sort_by)
 	
 
 @cli.command()
@@ -46,6 +48,14 @@ def odds(refresh):
 @click.option('--refresh', '-r', help='Should refresh player stats', is_flag=True)
 def games(name, refresh):
 	GamesController().games(name, refresh)
+	
+	
+@cli.command()
+@click.option('--name', '-n', help='Name of player you want to search for', type=str)
+@click.option('--name2', '-n2', help='Name of player you want to search for', type=str)
+@click.option('--refresh', '-r', help='Should refresh player stats', is_flag=True)
+def trade(name, name2, refresh):
+	TradeMachineController().trade_machine(name, name2, refresh)
 
 
 if __name__ == '__main__':

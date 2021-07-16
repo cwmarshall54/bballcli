@@ -25,7 +25,7 @@ class FbRankPandas:
 		self.utils.write_file("owner_index.json", owner_list)
 		return owner_list
 		
-	def yahoo_rank(self, should_refresh, count, show_z):
+	def yahoo_rank(self, should_refresh, count, show_z, sort):
 		if should_refresh:
 			player_stats = self.refresh_player_stats()
 			owner_list = self.get_ownership_of_taken_players()
@@ -76,8 +76,16 @@ class FbRankPandas:
 				['GP_z', 'blk_z', 'fg3m_z', 'ast_z', 'reb_z', 'stl_z', "TO_z",
 				 "ft_weighted",
 				 "fg_weighted", "pts_z", "ft_weighted_z", "fg_weighted_z", "Eligible positions"], axis=1)
+			
+		if sort:
+			sort_by = sort
+			asc = False
+		else:
+			sort_by = "Total Rank"
+			asc = True
 					
-		print(df.sort_values(by="Total Rank", ascending=True).head(count).round(3))
+		df = df.sort_values(by=sort_by, ascending=asc).head(count).round(3)
+		return df
 	
 		# df = df[['name', 'ast_z', 'blk_z', 'fg3m_z', 'pts_z', 'reb_z', 'stl_z',
 		# 'ft_weighted_z', 'fg_weighted_z', 'turnover_z', 'Total_z']]

@@ -17,10 +17,10 @@ class TradeMachineController:
 		self.yahoo_API = YahooAPI()
 		self.pandas_FbRank = FbRankPandas()
 
-	def trade_machine(self, df, my_players, their_players):
-		my_df = df[df["Name"].isin(my_players)]
-		their_df = df[df["Name"].isin(their_players)]
+	def trade_machine(self, my_players, their_players, should_refresh):
+		df = self.pandas_FbRank.yahoo_rank(should_refresh, 200, None, None)
+		
+		my_df = df[df["Name"].isin([my_players])]
+		their_df = df[df["Name"].isin([their_players])]
 	
-		self.utils.print(my_df.sort_values(by="My Rank", ascending=True))
-		print("")
-		self.utils.print(their_df.sort_values(by="My Rank", ascending=True))
+		self.utils.print(pd.concat([my_df, their_df]).sort_values(by="Total Rank", ascending=True))

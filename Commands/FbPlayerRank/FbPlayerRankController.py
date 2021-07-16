@@ -17,5 +17,6 @@ class FbPlayerRankController:
 		self.yahoo_API = YahooAPI()
 		self.pandas_FbRank = FbRankPandas()
 	
-	def print_fb_rank(self, should_refresh, count, show_zscore):
-		self.pandas_FbRank.yahoo_rank(should_refresh, count, show_zscore)
+	def print_fb_rank(self, should_refresh, count, show_zscore, sort_by):
+		df = self.pandas_FbRank.yahoo_rank(should_refresh, count, show_zscore, sort_by)
+		print(df)

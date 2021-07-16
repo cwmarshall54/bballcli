@@ -6,7 +6,7 @@ from datetime import date
 pd.options.mode.chained_assignment = None
 file_path = "/Users/chasemarshall1/Desktop/fantasybball/"
 
-curr_week = 5
+curr_week = 15
 
 
 class Utils:

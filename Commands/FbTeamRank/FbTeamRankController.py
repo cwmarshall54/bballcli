@@ -69,8 +69,8 @@ class FbTeamRankController:
 		return series
 
 	def parse_all_matchups(self):
-		all_data = self.parse_week_matchups(1)
-		for week_num in range(2, self.utils.get_curr_week() + 1):
+		all_data = self.parse_week_matchups(9)
+		for week_num in range(10, self.utils.get_curr_week() + 1):
 			week_data = self.parse_week_matchups(week_num)
 			all_data = self.utils.combine_weeks(all_data, week_data)
 		return all_data.set_index('name')
